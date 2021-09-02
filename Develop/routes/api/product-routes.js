@@ -71,7 +71,7 @@ router.put('/:id', (req, res) => {
       id: req.params.id,
     },
   })
-    .then((product) => {
+    .then((Product) => {
       // find all associated tags from ProductTag
       return ProductTag.findAll({ where: { product_id: req.params.id } });
     })
@@ -108,7 +108,7 @@ router.put('/:id', (req, res) => {
 router.delete('/:id', async (req, res) => {
     // delete one product by its `id` value
     try {
-      const productData = await product.destroy({
+      const productData = await Product.destroy({
         where: {
           id: req.params.id
         }

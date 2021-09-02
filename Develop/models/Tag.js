@@ -26,5 +26,3 @@ Tag.init(
 );
 
 module.exports = Tag;
-// tag_name
-// String.
